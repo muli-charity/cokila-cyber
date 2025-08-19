@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COKILA CYBER – Moi Avenue</title>
+  <style>
+    :root{
+      --accent:#0ea5e9; /* sky blue */
+      --accent-dark:#0284c7;
+      --ink:#111827;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --chip:#f1f5f9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-dark);text-decoration:underline}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:10;
+      background:#91a7f0;border-bottom:1px solid #dde6f8;
+      backdrop-filter:saturate(180%) blur(8px);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      height:64px;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{
+      width:36px;height:36px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#22d3ee);
+      display:grid;place-items:center;color:#fff;font-weight:800;
+      box-shadow:0 6px 16px rgba(2,132,199,.25);
+    }
+    .brand h1{font-size:1.1rem;margin:0}
+    .tag{color:var(--muted);font-size:.9rem}
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(135deg,#e0f2fe,#f0f9ff);
+      padding:56px 0 32px;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .hero h2{margin:0 0 8px;font-size:2rem}
+    .hero p{margin:0;color:var(--muted)}
+    .badges{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:.9rem}
+
+    /* Sections */
+    section{padding:40px 0}
+    .grid{
+      display:grid;gap:16px;
+      grid-template-columns:repeat(1,minmax(0,1fr));
+    }
+    @media(min-width:700px){
+      .grid-3{grid-template-columns:repeat(3,1fr)}
+      .grid-2{grid-template-columns:repeat(2,1fr)}
+    }
+    .card{
+      background:#fff;border:1px solid #e5e7eb;border-radius:16px;
+      padding:18px;transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(2,132,199,.08)}
+    .card h3{margin:0 0 6px;font-size:1.05rem}
+    .muted{color:var(--muted);font-size:.95rem}
+
+    /* Price list */
+    .price-row{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 0;border-bottom:1px dashed #e5e7eb;
+    }
+    .price-row:last-child{border-bottom:none}
+    .price{font-weight:700;color:var(--accent-dark)}
+
+    /* CTA */
+    .cta{
+      display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+      background:linear-gradient(135deg,#0ea5e9,#22d3ee);
+      color:#fff;padding:20px;border-radius:16px;
+    }
+    .btn{
+      appearance:none;border:none;cursor:pointer;
+      padding:10px 16px;border-radius:10px;font-weight:700;
+    }
+    .btn.primary{background:#fff;color:var(--accent-dark)}
+    .btn.ghost{background:rgba(255,255,255,.15);color:#fff}
+    .btn:hover{filter:brightness(0.97)}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);font-size:.95rem}
+    .footer-line{border-top:1px solid #e5e7eb;padding-top:16px}
+    .row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">CC</div>
+        <div>
+          <h1>COKILA CYBER</h1>
+          <div class="tag">Moi Avenue • Nairobi</div>
+        </div>
+      </div>
+      <div class="tag">Open Mon–Sat • 8:00am – 8:00pm</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <h2>Your one-stop cyber café & print shop</h2>
+      <p>Printing, photocopy, passport photos, KRA & eCitizen services, laminating, scanning, internet, workstation rentals—fast and affordable.</p>
+      <div class="badges">
+        <span class="chip">Fast Service</span>
+        <span class="chip">Affordable Rates</span>
+        <span class="chip">Mpesa • Card • Cash</span>
+        <span class="chip">Free Wi-Fi (in-store)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section>
+    <div class="container">
+      <h2 style="margin:0 0 16px">Popular Services</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Printing & Photocopy</h3>
+          <p class="muted">B/W & Colour • A4–A3 • Bulk discounts available.</p>
+        </div>
+        <div class="card">
+          <h3>Passport Photos</h3>
+          <p class="muted">Instant print • Digital copies • Background edits.</p>
+        </div>
+        <div class="card">
+          <h3>KRA & eCitizen</h3>
+          <p class="muted">PIN, returns, NTSA, good conduct, HELB, NEMIS & more.</p>
+        </div>
+        <div class="card">
+          <h3>Scanning & Email</h3>
+          <p class="muted">High-resolution PDF/JPG • We can send for you.</p>
+        </div>
+        <div class="card">
+          <h3>Lamination & Binding</h3>
+          <p class="muted">ID, certificates, menus • Spiral & tape binding.</p>
+        </div>
+        <div class="card">
+          <h3>Workstations & Internet</h3>
+          <p class="muted">Hourly PC access • High-speed browsing and printing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prices -->
+  <section style="padding-top:0">
+    <div class="container">
+      <h2 style="margin:0 0 16px">Sample Prices</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="price-row"><span>B/W Print (A4)</span><span class="price">KSh 10</span></div>
+          <div class="price-row"><span>Colour Print (A4)</span><span class="price">KSh 30</span></div>
+          <div class="price-row"><span>Photocopy (A4)</span><span class="price">KSh 5</span></div>
+          <div class="price-row"><span>Scanning (per page)</span><span class="price">KSh 20</span></div>
+        </div>
+        <div class="card">
+          <div class="price-row"><span>Passport Photos (8 pcs)</span><span class="price">KSh 200</span></div>
+          <div class="price-row"><span>Lamination (A4)</span><span class="price">KSh 80</span></div>
+          <div class="price-row"><span>Spiral Binding</span><span class="price">From KSh 150</span></div>
+          <div class="price-row"><span>PC Usage (per hour)</span><span class="price">KSh 100</span></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px">* Bulk/Student discounts available. Ask at the counter.</p>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section>
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Find Us</h3>
+          <p class="muted" style="margin:6px 0 14px">
+            COKILA CYBER,First floor MKU Union towers Moi Avenue, Nairobi (CBD).<br />
+            Hours: Mon–Sat 8:00am–8:00pm • Sun 8:00am–7:00pm
+          </p>
+          <p style="margin:0 0 10px"><strong>Call/WhatsApp:</strong> <a href="tel:+254711553918">+254 711553915</a></p>
+          <p style="margin:0 0 10px"><strong>Email:</strong> <a href="mailto:cokilacyber@gmail.com">cokilacyber@gmail.com</a></p>
+          <p style="margin:0"><strong>Payments:</strong> Mpesa Till available • Cards accepted</p>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <!-- Simple map embed targeting Moi Avenue, Nairobi -->
+          <iframe
+            title="Map - Moi Avenue Nairobi"
+            src="https://www.google.com/maps?q=Moi+Avenue,+Nairobi&output=embed"
+            width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container">
+    <div class="cta">
+      <div>
+        <strong>Need something printed fast?</strong><br />
+        Send your files on WhatsApp or email and pick up in minutes.
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn primary" href="tel:+254711553918">Call Now</a>
+        <a class="btn ghost" href="mailto:cokilacyber@gmail.com">Email Files</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-line">
+      <div class="row">
+        <div>© <span id="y"></span> COKILA CYBER, Moi Avenue. 2025 All rights reserved.</div>
+        <div>Made with ♥ in Nairobi</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
