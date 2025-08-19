@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COKILA CYBER – Moi Avenue</title>
   <style>
+    /* Styles for mobile phones (default) */
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
     :root{
       --accent:#0ea5e9; /* sky blue */
       --accent-dark:#0284c7;
@@ -243,4 +254,5 @@
   </script>
 </body>
 </html>
+
 
